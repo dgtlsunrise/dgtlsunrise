@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Axos SSoT Update Proposal Payload",
+  "type": "object",
+  "description": "Generated when the daily web sync detects a discrepancy between the live Axos website and the internal sSoT.json. Halts for Ed25519 HITL signature.",
+  "properties": {
+    "audit_metadata": {
+      "timestamp": { "type": "string", "format": "date-time" },
+      "scraped_url": { "type": "string", "format": "uri" }
+    },
+    "proposed_changes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ssot_json_key_path": { 
+            "type": "string", 
+            "description": "The exact dot-notation path in sSoT.json (e.g., products.consumer_deposit.summit_savings.apy)" 
+          },
+          "current_value_in_memory": { "type": ["number", "string", "boolean"] },
+          "new_value_detected_on_web": { "type": ["number", "string", "boolean"] },
+          "justification": { "type": "string", "description": "Brief explanation or exact text snippet scraped from the website." }
+        },
+        "required": ["ssot_json_key_path", "current_value_in_memory", "new_value_detected_on_web", "justification"]
+      }
+    },
+    "cryptographic_gate": {
+      "hitl_signature_required": { "type": "boolean", "const": true }
+    }
+  },
+  "required": ["audit_metadata", "proposed_changes", "cryptographic_gate"]
+}

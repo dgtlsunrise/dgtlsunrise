@@ -1,0 +1,32 @@
+{
+  "bank_metadata": {
+    "current_effective_date": "2026-04-26",
+    "nmls_id": "524995",
+    "fdic_member": true
+  },
+  "products": {
+    "consumer_deposit": {
+      "axos_one": {
+        "savings": { "max_apy": 4.21, "base_apy": 1.00, "balance_cap": 499999.99, "excess_apy": 4.01 },
+        "checking": { "max_apy": 0.51, "base_apy": 0.00 },
+        "qualification_options": [
+          { "option": 1, "dd_min": 1500, "adb_min": 1500 },
+          { "option": 2, "dd_min": 5000, "adb_min": 5000 }
+        ]
+      },
+      "rewards_checking": { "max_apy": 3.30, "balance_cap": 50000, "dd_min": 1500 },
+      "summit_savings": { "apy": 3.75, "rate": 3.68, "no_minimum": true, "no_fees": true }
+    },
+    "business_deposit": {
+      "basic_business_checking": { "bonus": 200, "promo_code": "START200", "expiration": "2026-06-30", "adb_requirement": 3000 },
+      "business_premium_savings": { "apy": 3.60 }
+    },
+    "lending": {
+      "heloc_example": { "amount": 100000, "apr": 4.25, "monthly_payment": 354.17 }
+    },
+    "expanded_coverage": {
+      "consumer_max": 2500000,
+      "commercial_max": 265000000
+    }
+  }
+}

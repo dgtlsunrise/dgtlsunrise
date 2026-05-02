@@ -1,0 +1,15 @@
+{
+  "commercial_use": true,
+  "indemnity": "full_enterprise_tier",
+  "allowed_models": [
+    "Google Veo 3.1",
+    "Fal.ai (Flux.1 [pro] ultra)",
+    "Modal (Headless Three.js)",
+    "ElevenLabs (Enterprise)",
+    "Sync.so (Sync-3)"
+  ],
+  "provenance": {
+    "soft_binding": "Steg.AI",
+    "metadata_recovery": "FTS5_Lookup"
+  }
+}
